@@ -27,10 +27,9 @@
     <script>
         const { origin, protocol } = window.location;
         const isDev = protocol === "http:";
-
         const config = {
             staticBaseUrl: '/static/', // Base URL for static files
-            apiBaseUrl: isDev ? origin : 'http://192.168.3.227:3333', // Base URL for API calls
+            apiBaseUrl: 'https://innswap_perpetual.zodeak-dev.com/', // Base URL for API calls
             graphqlTemplateUrl: 'https://api.thegraph.com/subgraphs/name/apollx-apx/apollox-perp-{{network}}', // GraphQL template URL
             brokerId: 2009, // Broker ID for chain recording
             i18nBaseUrl: 'https://res.apxstatic.com/cloud-futures/static/i18n/kvProd/exchange/web', // i18n base URL
