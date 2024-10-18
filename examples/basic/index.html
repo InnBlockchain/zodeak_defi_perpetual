@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>My Futures Exchange</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/public/favicon.ico" />
     <style>
         html,
         body {
@@ -18,6 +18,9 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
+        }
+        .needToHide{
+            display: none;
         }
     </style>
     <script src="/sdk/sdk.4.0.0.js"></script> <!-- Ensure this URL is correct -->
@@ -37,27 +40,33 @@
             enableThemeToggle: true, // Enable theme toggle
             isTestnet: true, // Set to true for test mode
             supportNetworks: ['bnb', 'arb'], // Supported networks
-            supportLanguages: ['en', 'es', 'fr'], // Supported languages
+           // supportLanguages: ['en', 'es', 'fr'], // Supported languages
+           supportLanguages: ['en'],
             headerConfig: {
                 disable: false, // Set to true to hide header
                 logo: {
-                    darkImgUrl: 'https://cloudfutures-static.binancedev.com/cloud-futures/static/images/common/logo-dark.svg',
-                    darkRWDImgUrl: 'https://cloudfutures-static.binancedev.com/cloud-futures/static/images/common/logo-dark-rwd.svg',
-                    lightImgUrl: 'https://cloudfutures-static.binancedev.com/cloud-futures/static/images/common/logo-light.svg',
-                    lightRWDImgUrl: 'https://cloudfutures-static.binancedev.com/cloud-futures/static/images/common/logo-light-rwd.svg',
-                    navTo: 'https://www.apollox.finance', // URL for the logo navigation
+                    // darkImgUrl: 'https://cloudfutures-static.binancedev.com/cloud-futures/static/images/common/logo-dark.svg',
+                    // darkRWDImgUrl: 'https://cloudfutures-static.binancedev.com/cloud-futures/static/images/common/logo-dark-rwd.svg',
+                    // lightImgUrl: 'https://cloudfutures-static.binancedev.com/cloud-futures/static/images/common/logo-light.svg',
+                    // lightRWDImgUrl: 'https://cloudfutures-static.binancedev.com/cloud-futures/static/images/common/logo-light-rwd.svg',
+                    //navTo: 'https://www.apollox.finance', // URL for the logo navigation
+                    darkImgUrl: '/public/logoB.svg',
+                    darkRWDImgUrl: '/public/logoB.svg',
+                    lightImgUrl: '/public/logo.svg',
+                    lightRWDImgUrl: '/public/logo.svg',
+                    navTo:'https://innswap_react.zodeak-dev.com/'
                 },
-                menu: {
-                    data: [
-                        { text: 'Home', navTo: '/' },
-                        { text: 'Trading', navTo: '/trading' },
-                        { text: 'Help', navTo: '/help' },
-                    ],
-                    placement: 'center', // Menu placement
-                },
-                customerService: {
-                    navTo: 'https://www.apollox.finance/support', // Customer service link
-                },
+                // menu: {
+                //     data: [
+                //         { text: 'Home', navTo: '/' },
+                //         { text: 'Trading', navTo: '/trading' },
+                //         { text: 'Help', navTo: '/help' },
+                //     ],
+                //     placement: 'center', // Menu placement
+                // },
+               // customerService: {
+                 //   navTo: 'https://www.apollox.finance/support', // Customer service link
+                //},
             },
             defaultTheme: "light", // Initial theme value
             customCssUrl: "", // Custom CSS URL for additional styling
